@@ -1,4 +1,4 @@
-const apiKey = "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";
+const OPEN_API_KEY = "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";
 const baseUrl = "https://api.openai.com/v1/images/generations";
 const button = document.getElementById("button");
 const input = document.getElementById("input_field");
@@ -25,7 +25,7 @@ const getImages = async () => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${apiKey}`,
+        Authorization: `Bearer ${OPEN_API_KEY}`,
       },
       body: JSON.stringify({
         n: 5,
