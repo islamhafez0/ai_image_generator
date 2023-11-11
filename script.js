@@ -1,4 +1,4 @@
-const OPEN_API_KEY = "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";
+const OPEN_API_KEY = "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";
 const baseUrl = "https://api.openai.com/v1/images/generations";
 const button = document.getElementById("button");
 const input = document.getElementById("input_field");
@@ -35,6 +35,7 @@ const getImages = async () => {
     };
 
     const response = await fetch(baseUrl, options);
+    console.log(response);
     const data = await response.json();
     if (data && data.data && Array.isArray(data.data)) {
       data.data.forEach((d) => {
@@ -48,8 +49,11 @@ const getImages = async () => {
     console.log(data);
     input.value = "";
   } catch (error) {
-    alert("An error occurred. Please try again later.");
-    console.log(error);
+    const errorMessage =
+      error && error.error && error.error.message
+        ? error.error.message
+        : "An error occurred. Please try again later.";
+    alert(errorMessage);
   } finally {
     loaderWrapper.style.display = "none";
   }
