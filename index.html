@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ai Image Generator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="src/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <a href="#">AI Image Generator</a>
+      </div>
+      <nav class="nav">
+        <a href="#" class="link">Info</a>
+        <a href="#" class="link">About Us</a>
+        <div class="searchIcon">
+          <i class="ri-search-line"></i>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <h2>AI Image Generator turns imagination into instant visuals.</h2>
+      <div class="hero-page">
+        <form class="form">
+          <input
+            type="text"
+            id="input_field"
+            placeholder="Text to generate into images"
+          />
+          <button id="button">Generate</button>
+          <div class="loader-wrapper">
+            <span class="loader">loading....</span>
+          </div>
+        </form>
+      </div>
+      <div class="images-wrapper"></div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
